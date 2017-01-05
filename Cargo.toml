@@ -10,3 +10,4 @@ version = "0.1.0"
 
 [dependencies]
 volatile-register = "0.1.2"
+stm32 = { path = "../stm32" }

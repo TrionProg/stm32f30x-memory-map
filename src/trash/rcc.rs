@@ -1,9 +1,6 @@
-use ::stm32::register::{RW32,RO32,WO32};
-use ::stm32::rcc::RccRBTrait;
-
 # [ doc = "Reset and clock control" ]
 # [ repr ( C ) ]
-pub struct RccRB {
+pub struct Rcc {
     # [ doc = "0x00 - Clock control register" ]
     pub cr: Cr,
     # [ doc = "0x04 - Clock configuration register (RCC_CFGR)" ]
@@ -30,19 +27,6 @@ pub struct RccRB {
     pub cfgr2: Cfgr2,
     # [ doc = "0x30 - Clock configuration register 3" ]
     pub cfgr3: Cfgr3,
-}
-
-//pub const RCC: usize = 0x40021000;
-
-impl RccRBTrait for RccRB{
-    //Self
-    fn get_rcc() -> &'static Self{
-        unsafe { &*(0x40021000 as *const Self) }
-    }
-
-    fn get_rcc_mut() -> &'static mut Self{
-        unsafe{ &mut *(0x40021000 as *mut Self) }
-    }
 }
 
 # [ repr ( C ) ]
