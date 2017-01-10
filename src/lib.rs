@@ -19,6 +19,8 @@ pub mod gpiod;
 pub mod gpioe;
 pub mod gpiof;
 
+pub mod timer6;
+
 /*
 #[allow(missing_docs)]
 pub mod btim;
